@@ -141,6 +141,14 @@ A schedule planner that helps students plan effective class schedules without th
 
 ![Python](https://img.shields.io/badge/-Python-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![OCR](https://img.shields.io/badge/-OCR-00BFFF?style=flat-square&labelColor=0D1117)
 
+**CodePath — Applied AI Engineering (AI201)** — Project-Based Course Program · *May 2026 – Aug 2026 (in progress)*
+- Enrolled in CodePath's Applied AI Engineering Pathway, an intensive project-based AI/ML curriculum
+- Built a progression of AI projects: a rules-based chatbot (RulesBot), a RAG-based professor-review assistant (StudentBuddy), an agentic thrift-shopping assistant (FitFindr), a fine-tuned Reddit-comment classifier (TakeMeter), and an AI-text provenance detection system (Provenance Guard)
+- Currently working through Project 5, a UI-focused build
+- Applied RAG pipelines, vector search, prompt engineering, and model fine-tuning across coursework
+
+![AI201](https://img.shields.io/badge/-CodePath%20AI201-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![Fine-Tuning](https://img.shields.io/badge/-Fine--Tuning-00BFFF?style=flat-square&labelColor=0D1117)
+
 **Operations Committee Member** — The Big Event @ McNeese State University · *Aug 2025 – May 2026*
 - Coordinated venue setup and tool distribution/return across 20 job sites for a 176-volunteer community event
 - Contributed to securing $4,700+ in sponsorships from Lowe's, Stine, and Tractor Supply
@@ -250,10 +258,10 @@ A schedule planner that helps students plan effective class schedules without th
 ```yaml
 current_focus:
   learning:
-    - Applied AI Engineering (CodePath AI201)
+    - Applied AI Engineering (CodePath AI201) - Project 5, wrapping up in August 2026
     - Advanced retrieval - hybrid search, reranking, self-verification RAG
   building:
-    - A-Self-Correcting-Legal-Research-System (early stage - hybrid RAG + CUAD benchmarking, just started)
+    - A-Self-Correcting-Legal-Research-System (hybrid RAG + CUAD benchmarking, early stage)
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
     - RAG evaluation methods
