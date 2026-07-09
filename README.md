@@ -2,7 +2,7 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,100:161B22&height=200&section=header&text=Rohitpreet%20Singh&fontSize=58&fontColor=00BFFF&fontAlignY=38&desc=Software%20Engineer%20%7C%20RAG%20%26%20Document%20Intelligence%20Systems&descAlignY=58&descSize=18&descAlign=50&animation=fadeIn)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=20&pause=1000&color=00BFFF&background=0D1117&center=true&vCenter=true&width=650&lines=%24+whoami;Rohitpreet+Singh+%E2%80%94+SWE+%40+Pfizer+AI+Extern;%24+cat+stack.txt;Python+%7C+React+%7C+Node.js+%7C+RAG%2FLLM+Systems;%24+.%2Frun+--current-focus;Building+RAG+pipelines+%26+document+intelligence+systems)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=20&pause=1000&color=00BFFF&background=0D1117&center=true&vCenter=true&width=650&lines=%24+whoami;Rohitpreet+Singh+%E2%80%94+SWE+Extern+%40+Extern+(Pfizer+Partner+Project);%24+cat+stack.txt;Python+%7C+React+%7C+Node.js+%7C+RAG%2FLLM+Systems;%24+.%2Frun+--current-focus;Building+RAG+pipelines+%26+document+intelligence+systems)](https://git.io/typing-svg)
 
 ![Education](https://img.shields.io/badge/Education-McNeese%20State%20University-00BFFF?style=flat-square&labelColor=0D1117)
 ![Degree](https://img.shields.io/badge/Degree-B.S.%20Computer%20Science%20%2727-00BFFF?style=flat-square&labelColor=0D1117)
@@ -20,7 +20,7 @@
 
 ## `> cat about.md`
 
-I build things that work under real constraints — from RAG pipelines processing pharmaceutical docs at Pfizer to volunteer systems coordinating 176 people across 20 job sites. Still early in my software engineering journey, but I care about the parts of AI engineering that don't show up in tutorials: retrieval evaluation, hallucination grounding, and systems that hold up past the demo.
+I build things that work under real constraints — from RAG pipelines processing pharmaceutical docs through an Extern externship on a Pfizer-partnered project, to volunteer systems coordinating 176 people across 20 job sites. Still early in my software engineering journey, but I care about the parts of AI engineering that don't show up in tutorials: retrieval evaluation, hallucination grounding, and systems that hold up past the demo.
 
 ```bash
 ROLE      = "Software Engineer (Full-Stack + AI/RAG), Student"
@@ -59,7 +59,7 @@ OPEN_TO   = ["SWE Internship", "AI/ML Internship", "Full-Stack Internship"]
 | Domain | Proficiency | Details |
 |---|---|---|
 | RAG & LLM Systems | Intermediate | Built several RAG pipelines (ChromaDB, LlamaIndex, Groq, sentence-transformers) as course/personal projects, still building depth |
-| Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search at Pfizer |
+| Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio — built a handful of role-based, real-time systems |
 | Backend & Systems Programming | Intermediate | Java OOP coursework — file I/O persistence, access-control systems |
 | Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
@@ -133,7 +133,8 @@ A schedule planner that helps students plan effective class schedules without th
 
 ## `> git log --experience`
 
-**Pfizer Externship** — Extern · *May 2026 – Present*
+**Extern Externship — Pfizer Partner Project** — Extern (Software Engineering Extern) · *May 2026 – Present*
+- Placed via Extern's externship program on a project team partnered with Pfizer
 - Building Python pipelines to process pharmaceutical vendor files using Tesseract and PaddleOCR for automated document classification
 - Developing a RAG retrieval system with LlamaIndex, deploying open-source LLMs (Mistral, Phi-2) for semantic document search
 - Delivering end-to-end system evaluation benchmarking OCR accuracy and retrieval quality, including deployment recommendations and a demo UI
