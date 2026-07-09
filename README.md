@@ -141,13 +141,14 @@ A schedule planner that helps students plan effective class schedules without th
 
 ![Python](https://img.shields.io/badge/-Python-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![OCR](https://img.shields.io/badge/-OCR-00BFFF?style=flat-square&labelColor=0D1117)
 
-**CodePath — Applied AI Engineering (AI201)** — Project-Based Course Program · *May 2026 – Aug 2026 (in progress)*
-- Enrolled in CodePath's Applied AI Engineering Pathway, an intensive project-based AI/ML curriculum
-- Built a progression of AI projects: a rules-based chatbot (RulesBot), a RAG-based professor-review assistant (StudentBuddy), an agentic thrift-shopping assistant (FitFindr), a fine-tuned Reddit-comment classifier (TakeMeter), and an AI-text provenance detection system (Provenance Guard)
-- Currently working through Project 5, a UI-focused build
-- Applied RAG pipelines, vector search, prompt engineering, and model fine-tuning across coursework
+**CodePath — Applied AI Engineering Pathway (AI201)** — Student · *May 2026 – August 2026 (in progress)*
+- Accepted into CodePath's Applied AI Engineering program; shipping a new applied AI/RAG project roughly every week
+- Built StudentBuddy, a RAG chatbot over 141 chunked professor reviews (ChromaDB, sentence-transformers, Groq) — evaluation write-up documents both what worked and a real retrieval failure (a comparative query that missed one professor's reviews due to how chunks were retrieved)
+- Built Provenance Guard, a dual-signal AI-text-detection backend (LLM classification + stylometric heuristics) with confidence scoring, an appeals workflow, and full audit logging
+- Fine-tuned a DistilBERT classifier (TakeMeter) on real scraped Reddit data to score discourse quality in r/soccer
+- Debugged an existing Flask/SQLAlchemy codebase (Mixtape) as a structured bug-hunt exercise — traced failures from routes down into the service layer to find, fix, and document the underlying bugs
 
-![AI201](https://img.shields.io/badge/-CodePath%20AI201-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![Fine-Tuning](https://img.shields.io/badge/-Fine--Tuning-00BFFF?style=flat-square&labelColor=0D1117)
+![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![ChromaDB](https://img.shields.io/badge/-ChromaDB-00BFFF?style=flat-square&labelColor=0D1117) ![Groq](https://img.shields.io/badge/-Groq-00BFFF?style=flat-square&labelColor=0D1117) ![Debugging](https://img.shields.io/badge/-Debugging-00BFFF?style=flat-square&labelColor=0D1117)
 
 **Operations Committee Member** — The Big Event @ McNeese State University · *Aug 2025 – May 2026*
 - Coordinated venue setup and tool distribution/return across 20 job sites for a 176-volunteer community event
