@@ -211,10 +211,10 @@ A schedule planner that helps students plan effective class schedules without th
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=rohitpeets&show_icons=true&hide_border=true&title_color=00BFFF&icon_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" width="49%"/>
+<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/stats.svg" width="49%"/>
 <img src="https://streak-stats.demolab.com/?user=rohitpeets&hide_border=true&background=0D1117&stroke=00BFFF&ring=00BFFF&fire=00BFFF&currStreakLabel=00BFFF&sideNums=00BFFF&sideLabels=E6EDF3&dates=E6EDF3&currStreakNum=E6EDF3" width="49%"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rohitpeets&layout=compact&hide_border=true&title_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" width="49%"/>
+<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/top-langs.svg" width="49%"/>
 
 </div>
 
@@ -222,7 +222,7 @@ A schedule planner that helps students plan effective class schedules without th
 
 <div align="center">
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=rohitpeets&theme=algolia&column=7&no-frame=true&margin-w=8)
+![Trophies](https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/trophy.svg)
 
 </div>
 
