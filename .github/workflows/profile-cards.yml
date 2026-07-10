@@ -17,17 +17,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make assets dir
-        run: mkdir -p profile-assets
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=rohitpeets&show_icons=true&hide_border=true&title_color=00BFFF&icon_color=00BFFF&text_color=E6EDF3&bg_color=0D1117
+          path: profile-assets/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch stats card
-        run: curl -sL "https://github-readme-stats.vercel.app/api?username=rohitpeets&show_icons=true&hide_border=true&title_color=00BFFF&icon_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" -o profile-assets/stats.svg
+      - name: Generate top-langs card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=rohitpeets&layout=compact&hide_border=true&title_color=00BFFF&text_color=E6EDF3&bg_color=0D1117
+          path: profile-assets/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch top-langs card
-        run: curl -sL "https://github-readme-stats.vercel.app/api/top-langs/?username=rohitpeets&layout=compact&hide_border=true&title_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" -o profile-assets/top-langs.svg
-
-      - name: Fetch trophy card
-        run: curl -sL "https://github-profile-trophy.vercel.app/?username=rohitpeets&theme=algolia&column=7&no-frame=true&margin-w=8" -o profile-assets/trophy.svg
+      - name: Generate trophy
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: rohitpeets
+          output_path: profile-assets/trophy.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         run: |
