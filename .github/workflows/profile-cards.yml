@@ -1,0 +1,38 @@
+name: Generate Profile Cards
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make assets dir
+        run: mkdir -p profile-assets
+
+      - name: Fetch stats card
+        run: curl -sL "https://github-readme-stats.vercel.app/api?username=rohitpeets&show_icons=true&hide_border=true&title_color=00BFFF&icon_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" -o profile-assets/stats.svg
+
+      - name: Fetch top-langs card
+        run: curl -sL "https://github-readme-stats.vercel.app/api/top-langs/?username=rohitpeets&layout=compact&hide_border=true&title_color=00BFFF&text_color=E6EDF3&bg_color=0D1117" -o profile-assets/top-langs.svg
+
+      - name: Fetch trophy card
+        run: curl -sL "https://github-profile-trophy.vercel.app/?username=rohitpeets&theme=algolia&column=7&no-frame=true&margin-w=8" -o profile-assets/trophy.svg
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-assets/
+          git diff --staged --quiet || git commit -m "chore: refresh profile cards"
+          git push
