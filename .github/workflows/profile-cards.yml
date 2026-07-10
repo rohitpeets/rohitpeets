@@ -40,6 +40,11 @@ jobs:
           output_path: profile-assets/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Move trophy into place
+        run: |
+          mkdir -p profile-assets
+          if [ -f trophy.svg ]; then mv -f trophy.svg profile-assets/trophy.svg; fi
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
