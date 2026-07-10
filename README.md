@@ -238,11 +238,11 @@ A schedule planner that helps students plan effective class schedules without th
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rohitpeets&theme=blue_navy" width="100%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=rohitpeets&theme=blue_navy" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=rohitpeets&theme=blue_navy" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=rohitpeets&theme=blue_navy" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=rohitpeets&theme=blue_navy&utcOffset=-6" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rohitpeets&theme=github_dark" width="100%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=rohitpeets&theme=github_dark" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=rohitpeets&theme=github_dark" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=rohitpeets&theme=github_dark" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=rohitpeets&theme=github_dark&utcOffset=-6" width="49%"/>
 
 </div>
 
