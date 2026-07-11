@@ -60,7 +60,7 @@ OPEN_TO   = ["SWE Internship", "AI/ML Internship", "Full-Stack Internship"]
 |---|---|---|
 | RAG & LLM Systems | Intermediate | Built several RAG pipelines (ChromaDB, LlamaIndex, Groq, sentence-transformers) as course/personal projects, still building depth |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
-| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio — built a handful of role-based, real-time systems |
+| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio, Java Swing — built a handful of role-based, real-time and desktop systems |
 | Backend & Systems Programming | Intermediate | Java OOP coursework — file I/O persistence, access-control systems |
 | Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
 | Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, ran a community meal initiative from age 11 |
@@ -112,6 +112,22 @@ Fine-tuned DistilBERT classifier for r/soccer comments across four labels (Analy
 | **Impact** | Improved Humor & Prediction F1 over the zero-shot baseline |
 
 🔗 [github.com/rohitpeets/ai201-project3-takemeter](https://github.com/rohitpeets/ai201-project3-takemeter)
+
+</details>
+
+<details>
+<summary><b>Flappy Bird - Multiplayer 2D Game</b></summary>
+<br/>
+
+Rebuilt Flappy Bird in Java Swing with 60 FPS physics, pixel-accurate collision, and local multiplayer, solo and over 2 weeks. Surveyed 10 classmates before building, then shipped requested features including an in-game shop, purchasable skins, and persistent balance. Architected a centralized FrameManager handling all screen transitions and sound events across 4 game states.
+
+| | |
+|---|---|
+| **Stack** | Java Swing GUI, OOP, file I/O persistence |
+| **Scale** | 4 game states, in-game shop + persistent balance system |
+| **Impact** | Shipped every feature requested by a 10-person classmate survey |
+
+🔗 [github.com/rohitpeets/FlappyBird2D_282_FinalProject](https://github.com/rohitpeets/FlappyBird2D_282_FinalProject)
 
 </details>
 
