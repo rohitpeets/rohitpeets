@@ -262,7 +262,7 @@ current_focus:
     - Applied AI Engineering (CodePath AI201) - Project 5, wrapping up in August 2026
     - Advanced retrieval - hybrid search, reranking, self-verification RAG
   building:
-    - A-Self-Correcting-Legal-Research-System (hybrid RAG + CUAD benchmarking, early stage)
+    - A-Self-Correcting-Legal-Research-System (hybrid RAG + CUAD benchmarking) - chunking and dataset-loading built, retrieval/reranking not yet implemented
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
     - RAG evaluation methods
