@@ -1,69 +1,44 @@
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,100:161B22&height=200&section=header&text=Rohitpreet%20Singh&fontSize=58&fontColor=00BFFF&fontAlignY=38&desc=Software%20Engineer%20%7C%20RAG%20%26%20Document%20Intelligence%20Systems&descAlignY=58&descSize=18&descAlign=50&animation=fadeIn)
+# Rohitpreet Singh
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=20&pause=1000&color=00BFFF&background=0D1117&center=true&vCenter=true&width=650&lines=%24+whoami;Rohitpreet+Singh+%E2%80%94+SWE+Extern+%40+Extern+(Pfizer+Partner+Project);%24+cat+stack.txt;Python+%7C+React+%7C+Node.js+%7C+RAG%2FLLM+Systems;%24+.%2Frun+--current-focus;Building+RAG+pipelines+%26+document+intelligence+systems)](https://git.io/typing-svg)
+**Software Engineer — RAG & Document Intelligence Systems**
 
-![Education](https://img.shields.io/badge/Education-McNeese%20State%20University-00BFFF?style=flat-square&labelColor=0D1117)
-![Degree](https://img.shields.io/badge/Degree-B.S.%20Computer%20Science%20%2727-00BFFF?style=flat-square&labelColor=0D1117)
-![Location](https://img.shields.io/badge/Location-Lake%20Charles%2C%20LA-00BFFF?style=flat-square&labelColor=0D1117)
+B.S. Computer Science '27 · McNeese State University · Lake Charles, LA
+
+![Internships](https://img.shields.io/badge/Open%20to-Internships-00BFFF?style=flat-square&labelColor=0D1117)
+![Full-Time](https://img.shields.io/badge/Open%20to-Full--Time%20(2027)-00BFFF?style=flat-square&labelColor=0D1117)
+![Work Setup](https://img.shields.io/badge/Remote%20%C2%B7%20Hybrid%20%C2%B7%20Onsite-00BFFF?style=flat-square&labelColor=0D1117)
+![Relocation](https://img.shields.io/badge/Will%20relocate-Anywhere%20in%20the%20US-00BFFF?style=flat-square&labelColor=0D1117)
 
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](https://www.linkedin.com/in/rohitpreet-singh-swe/)
-[![Email](https://img.shields.io/badge/GMAIL-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](mailto:rsingh5@mcneese.edu)
+[![Email](https://img.shields.io/badge/EMAIL-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](mailto:rsingh5@mcneese.edu)
 [![GitHub](https://img.shields.io/badge/GITHUB-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](https://github.com/rohitpeets)
-
-![Profile Views](https://komarev.com/ghpvc/?username=rohitpeets&color=00BFFF&style=flat-square&label=Profile+Views)
-![Followers](https://img.shields.io/github/followers/rohitpeets?style=flat-square&color=00BFFF&label=Followers)
-![Stars](https://img.shields.io/github/stars/rohitpeets?style=flat-square&color=00BFFF&label=Stars)
 
 </div>
 
+---
+
 ## `> cat about.md`
 
-I build things that work under real constraints — from RAG pipelines processing pharmaceutical docs through an Extern externship on a Pfizer-partnered project, to volunteer systems coordinating 176 people across 20 job sites. Still early in my software engineering journey, but I care about the parts of AI engineering that don't show up in tutorials: retrieval evaluation, hallucination grounding, and systems that hold up past the demo.
+Currently a Software Engineering Extern on a **Pfizer-partnered project**, building Python OCR and RAG pipelines that classify and semantically search pharmaceutical vendor documents. Concurrently shipping applied AI projects weekly through **CodePath's Applied AI Engineering pathway**.
 
-```bash
-ROLE      = "Software Engineer (Full-Stack + AI/RAG), Student"
-EXP       = "CS student, Class of 2027 | Hands-on with AI/software since early 2026"
-DOMAIN    = ["Healthcare/Pharma AI", "EdTech", "Community Systems"]
-STACK     = ["Python", "Java", "React", "Node.js", "Firebase", "SQL"]
-OPEN_TO   = ["SWE Internship", "AI/ML Internship", "Full-Stack Internship"]
-```
+I care about the parts of AI engineering that don't show up in tutorials: retrieval evaluation, hallucination grounding, and systems that hold up past the demo. Outside of code, I've run operations at real scale — $900K+ in payments across 300+ accounts, a 176-volunteer community event, and a self-funded meal initiative I led from age 11.
 
 ## `> ls tech-stack/`
 
 <div align="center">
 
-![Skills](https://skillicons.dev/icons?i=python,java,c,rust,go,js,html)
-<br/>
-![Skills](https://skillicons.dev/icons?i=react,nodejs,flask,firebase,git,github,css)
+![Skills](https://skillicons.dev/icons?i=python,java,js,react,nodejs,flask,firebase,git)
 
 </div>
 
-## `> cat specialties.txt`
-
-<div align="center">
-
-![RAG](https://img.shields.io/badge/RAG%20Systems-00BFFF?style=flat-square&labelColor=0D1117)
-![LLM](https://img.shields.io/badge/LLM%20Integration%20(Groq)-00BFFF?style=flat-square&labelColor=0D1117)
-![Vector](https://img.shields.io/badge/Vector%20Search%20(ChromaDB)-00BFFF?style=flat-square&labelColor=0D1117)
-![LlamaIndex](https://img.shields.io/badge/LlamaIndex-00BFFF?style=flat-square&labelColor=0D1117)
-![SentenceTransformers](https://img.shields.io/badge/Sentence--Transformers-00BFFF?style=flat-square&labelColor=0D1117)
-![OCR](https://img.shields.io/badge/OCR%20%2F%20Document%20Intelligence-00BFFF?style=flat-square&labelColor=0D1117)
-![Gradio](https://img.shields.io/badge/Gradio-00BFFF?style=flat-square&labelColor=0D1117)
-
-</div>
-
-## `> cat expertise.md`
-
-| Domain | Proficiency | Details |
-|---|---|---|
-| RAG & LLM Systems | Intermediate | Built several RAG pipelines (ChromaDB, LlamaIndex, Groq, sentence-transformers) as course/personal projects, still building depth |
-| Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
-| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio, Java Swing — built a handful of role-based, real-time and desktop systems |
-| Backend & Systems Programming | Intermediate | Java OOP coursework — file I/O persistence, access-control systems |
-| Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
-| Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, ran a community meal initiative from age 11 |
+| | |
+|---|---|
+| **Languages** | Python · Java · JavaScript · SQL |
+| **AI / Retrieval** | RAG · ChromaDB · LlamaIndex · Groq · sentence-transformers · DistilBERT |
+| **Document Intelligence** | Tesseract · PaddleOCR · semantic search · Gradio |
+| **Full-Stack** | React · Node.js · Flask · Firebase · Twilio |
 
 ## `> ls featured-projects/ --detailed`
 
@@ -116,7 +91,7 @@ Fine-tuned DistilBERT classifier for r/soccer comments across four labels (Analy
 </details>
 
 <details>
-<summary><b>Flappy Bird - Multiplayer 2D Game</b></summary>
+<summary><b>Flappy Bird — Multiplayer 2D Game</b></summary>
 <br/>
 
 Rebuilt Flappy Bird in Java Swing with 60 FPS physics, pixel-accurate collision, and local multiplayer, solo and over 2 weeks. Surveyed 10 classmates before building, then shipped requested features including an in-game shop, purchasable skins, and persistent balance. Architected a centralized FrameManager handling all screen transitions and sound events across 4 game states.
@@ -215,90 +190,19 @@ A schedule planner that helps students plan effective class schedules without th
 
 </div>
 
-## `> cat education.md`
-
-<div align="center">
-
-![Education](https://img.shields.io/badge/McNeese%20State%20University-B.S.%20Computer%20Science%20%2727-00BFFF?style=for-the-badge&labelColor=0D1117)
-
-</div>
-
-## `> ./analytics --github`
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/stats.svg" width="49%"/>
-<img src="https://streak-stats.demolab.com/?user=rohitpeets&hide_border=true&background=0D1117&stroke=00BFFF&ring=00BFFF&fire=00BFFF&currStreakLabel=00BFFF&sideNums=00BFFF&sideLabels=E6EDF3&dates=E6EDF3&currStreakNum=E6EDF3" width="49%"/>
-
-<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/top-langs.svg" width="49%"/>
-
-</div>
-
-## `> trophy-case --display`
-
-<div align="center">
-
-![Trophies](https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/trophy.svg)
-
-</div>
-
-## `> activity-graph --timeline`
-
-<div align="center">
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=rohitpeets&bg_color=0D1117&color=00BFFF&line=00BFFF&point=00BFFF&hide_border=true&area=true&area_color=00BFFF)
-
-</div>
-
-## `> contribution-report --detailed`
-
-<div align="center">
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rohitpeets&theme=github_dark" width="100%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=rohitpeets&theme=github_dark&utcOffset=-6" width="49%"/>
-
-</div>
-
-## `> ./snake-animation.sh`
-
-<div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/rohitpeets/rohitpeets/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
 ## `> cat current-focus.yaml`
 
 ```yaml
-current_focus:
-  learning:
-    - Applied AI Engineering (CodePath AI201) - Project 5, wrapping up in August 2026
-    - Advanced retrieval - hybrid search, reranking, self-verification RAG
-  building:
-    - A-Self-Correcting-Legal-Research-System (hybrid RAG + CUAD benchmarking) - chunking and dataset-loading built, retrieval/reranking not yet implemented
-    - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
-  exploring:
-    - RAG evaluation methods
-    - OCR and document intelligence pipelines
-  open_to:
-    - Software Engineering Internships (Summer/Fall 2026, 2027)
-    - AI/ML Engineering Internships
-    - Full-Stack Engineering roles
+building:
+  - Self-Correcting Legal Research System (hybrid RAG + CUAD benchmarking)
+  - Volunteer Management System (React / Node / Firebase / Twilio)
+
+exploring:
+  - Advanced retrieval - hybrid search, reranking, self-verification RAG
+  - RAG evaluation methods
+
+open_to:
+  - Software Engineering Internships (2026, 2027)
+  - AI/ML Engineering Internships
+  - Full-Time Software Engineering (2027)
 ```
-
-## `> ping me`
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](https://www.linkedin.com/in/rohitpreet-singh-swe/)
-[![Email](https://img.shields.io/badge/GMAIL-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](mailto:rsingh5@mcneese.edu)
-[![GitHub](https://img.shields.io/badge/GITHUB-00BFFF?style=for-the-badge&logoColor=000000&labelColor=00BFFF)](https://github.com/rohitpeets)
-
-*I build things that work under real constraints.*
-
-![Footer](https://capsule-render.vercel.app/api?type=wave&color=0:161B22,100:0D1117&height=120&section=footer)
-
-</div>
