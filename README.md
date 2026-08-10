@@ -43,6 +43,22 @@ I care about the parts of AI engineering that don't show up in tutorials: retrie
 ## `> ls featured-projects/ --detailed`
 
 <details open>
+<summary><b>Self-Correcting Legal Research System — Hybrid RAG over Legal Contracts</b></summary>
+<br/>
+
+Retrieval pipeline for legal contract Q&A over CUAD, built to test which retrieval components actually earn their complexity rather than assuming they do. Combines dense embedding search with BM25 keyword matching, fuses both rankings via Reciprocal Rank Fusion, then reranks the shortlist with a cross-encoder for final precision.
+
+| | |
+|---|---|
+| **Stack** | Python, ChromaDB, sentence-transformers, rank_bm25, CrossEncoder |
+| **Scale** | Dense + BM25 retrieval fused via RRF (k=60), cross-encoder rerank on a top-10 shortlist |
+| **Impact** | Persistent vector store with re-embedding guard; cross-encoder scoped to a shortlist for bi-encoder speed at cross-encoder precision |
+
+🔗 [github.com/rohitpeets/A-Self-Correcting-Legal-Research-System](https://github.com/rohitpeets/A-Self-Correcting-Legal-Research-System)
+
+</details>
+
+<details>
 <summary><b>StudentBuddy — AI-Powered Professor Review RAG System</b></summary>
 <br/>
 
@@ -70,7 +86,7 @@ Flask-based system detecting AI-generated text using dual signals: LLM classific
 | **Scale** | Dual-signal detection + appeals workflow + rate limiting + audit logging |
 | **Impact** | End-to-end provenance detection system with confidence scoring |
 
-🔗 [github.com/rohitpeets/ai201-project4-provenance-guard](https://github.com/rohitpeets/ai201-project4-provenance-guard)
+🔗 [github.com/rohitpeets/provenance-guard](https://github.com/rohitpeets/provenance-guard)
 
 </details>
 
@@ -194,7 +210,7 @@ A schedule planner that helps students plan effective class schedules without th
 
 ```yaml
 building:
-  - Self-Correcting Legal Research System (hybrid RAG + CUAD benchmarking)
+  - Self-Correcting Legal Research System — self-verification + ablation eval harness
   - Volunteer Management System (React / Node / Firebase / Twilio)
 
 exploring:
