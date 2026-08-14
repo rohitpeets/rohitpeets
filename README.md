@@ -2,28 +2,51 @@
 
 | Domain | Proficiency | Details |
 |---|---|---|
-| RAG & LLM Systems | Intermediate | Built multiple RAG pipelines (ChromaDB, hybrid dense+BM25 retrieval, cross-encoder reranking, Groq, sentence-transformers) across coursework and personal projects |
+| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and cross-encoder reranking from scratch across two separate systems; query routing and self-verification still in progress |
+| Backend & API Development | Intermediate-Advanced | Multiple Flask/SQLAlchemy REST APIs (Provenance Guard, CineLog, Mixtape) — service-layer debugging, code review cycles, and Git history recovery |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
-| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio, Flask — built role-based, real-time, and REST API systems |
-| Backend & Systems Programming | Intermediate | Java OOP coursework, Flask/SQLAlchemy debugging, Git history management (interactive rebase, conventional commits) |
-| Fine-Tuning & NLP Classification | Beginner | Fine-tuned a DistilBERT classifier on scraped Reddit data, benchmarked against a zero-shot LLM baseline |
+| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio — built a handful of role-based, real-time systems |
+| Systems Programming (Java) | Intermediate | OOP coursework and game architecture — file I/O persistence, access-control systems, real-time game loops |
+| Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
 | Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, ran a community meal initiative from age 11 |
 
 ## `> ls featured-projects/ --detailed`
 
 <details open>
-<summary><b>Self-Correcting Legal Research System — Hybrid RAG</b></summary>
+<summary><b>Self-Correcting Legal Research System — Advanced RAG</b></summary>
 <br/>
 
-Goes beyond basic RAG: combines dense retrieval (sentence-transformers + ChromaDB) with BM25 keyword search via Reciprocal Rank Fusion, then reranks the fused shortlist with a cross-encoder for precision. Benchmarked on CUAD (Contract Understanding Atticus Dataset).
+Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion, reranks the fused shortlist with a cross-encoder, and (planned) adds a self-verification pass so the system can catch its own bad answers.
+
+| Stage | Status |
+|---|---|
+| Chunking | ✅ Done |
+| Dense retrieval (sentence-transformers + ChromaDB) | ✅ Done |
+| BM25 keyword retrieval | ✅ Done |
+| Hybrid retrieval (RRF fusion) | ✅ Done |
+| Cross-encoder reranking | ✅ Done |
+| Query routing | Code written, not yet wired into the main pipeline |
+| Self-verification / guardrails / CUAD ablation harness | Planned |
+
+**Impact:** Fixed a real RRF scoring bug where a missing rank was incorrectly treated as rank 0 (a high score) instead of a non-contribution — caught via boundary testing, not by accident. Also fixed a BM25 tokenization bug (unstripped punctuation silently breaking keyword matches) that changed the top-5 results.
+
+🔗 [github.com/rohitpeets/A-Self-Correcting-Legal-Research-System](https://github.com/rohitpeets/A-Self-Correcting-Legal-Research-System)
+
+</details>
+
+<details>
+<summary><b>CineLog — Community Film Tracking API</b></summary>
+<br/>
+
+A Flask/SQLAlchemy API for tracking watched films and building collections. Contributed the watchlist feature end-to-end on a shared codebase.
 
 | | |
 |---|---|
-| **Stack** | Python, sentence-transformers, ChromaDB, rank_bm25, cross-encoder (ms-marco-MiniLM-L-6-v2) |
-| **Scale** | Hybrid dense+BM25 retrieval with RRF fusion, cross-encoder reranking on real legal contracts |
-| **Impact** | Chunking, dense retrieval, BM25, RRF fusion, and cross-encoder reranking all working end-to-end; query routing, self-verification, and an ablation harness are next |
+| **Stack** | Flask, SQLAlchemy, pytest |
+| **Scale** | Deduplication logic + full test coverage for the watchlist feature |
+| **Impact** | Addressed 6 maintainer review comments through a full code-review cycle; recovered from a silent rebase that dropped commits by managing an interactive rebase back to a clean, conventional-commit linear history |
 
-🔗 [github.com/rohitpeets/A-Self-Correcting-Legal-Research-System](https://github.com/rohitpeets/A-Self-Correcting-Legal-Research-System)
+🔗 [github.com/rohitpeets/CineLogApi](https://github.com/rohitpeets/CineLogApi)
 
 </details>
 
@@ -37,7 +60,7 @@ RAG pipeline enabling McNeese students to query professor reviews in natural lan
 |---|---|
 | **Stack** | Python, ChromaDB, sentence-transformers, Groq API |
 | **Scale** | 141 professor reviews across 10 faculty members |
-| **Impact** | Reduced hallucinated responses via strict prompt grounding; documented and fixed a real retrieval bug (ChromaDB defaulting to L2 distance instead of cosine) |
+| **Impact** | Debugged a real ChromaDB distance-metric bug (L2 → cosine) that was failing evaluation checkpoints; documented a specific retrieval failure case (a comparative query that missed one professor's reviews) with root-cause analysis |
 
 🔗 [github.com/rohitpeets/StudentBuddy](https://github.com/rohitpeets/StudentBuddy)
 
@@ -53,7 +76,7 @@ Flask-based system detecting AI-generated text using dual signals: LLM classific
 |---|---|
 | **Stack** | Flask, Groq (LLM classification), stylometric heuristics |
 | **Scale** | Dual-signal detection + appeals workflow + rate limiting + audit logging |
-| **Impact** | End-to-end provenance detection system with confidence scoring |
+| **Impact** | Wrote 9 boundary-case tests against the exact scoring thresholds (0.39 vs 0.41, 0.59 vs 0.61, the disagreement override at 0.4) before trusting the implementation — all passing |
 
 🔗 [github.com/rohitpeets/provenance-guard](https://github.com/rohitpeets/provenance-guard)
 
@@ -63,77 +86,45 @@ Flask-based system detecting AI-generated text using dual signals: LLM classific
 <summary><b>TakeMeter — Fine-Tuned Reddit Comment Classifier</b></summary>
 <br/>
 
-Fine-tuned DistilBERT classifier for r/soccer comments across four labels (Analysis, Prediction, Reaction, Humor), benchmarked against a zero-shot Groq baseline on real collected Reddit data.
+Fine-tuned DistilBERT classifier for r/soccer comments across four labels (Analysis, Prediction, Reaction, Humor), using real collected Reddit data.
 
 | | |
 |---|---|
 | **Stack** | Python, DistilBERT (fine-tuned), Reddit data collection |
-| **Scale** | 288 manually labeled examples, 4-label classification |
-| **Impact** | Improved Humor F1 by +0.26 and Prediction F1 by +0.13 over the zero-shot baseline, despite lower overall accuracy |
+| **Scale** | 288 manually labeled examples, downsampled to 160 balanced for training |
+| **Impact** | Improved Humor F1 by +0.26 and Prediction F1 by +0.13 over the zero-shot baseline, despite lower overall accuracy — fine-tuning learned community-specific patterns (sarcasm, memes) the baseline missed |
 
 🔗 [github.com/rohitpeets/takemeter](https://github.com/rohitpeets/takemeter)
 
 </details>
 
 <details>
-<summary><b>MixTape — Debugging an Existing Codebase</b></summary>
+<summary><b>Mixtape — Debugging a Live Codebase</b></summary>
 <br/>
 
-Picked up an existing Flask/SQLAlchemy social music app with 5 known bugs in its service layer. Traced each from its route down to the failing service; found, fixed, and documented 3.
+Picked up an existing Flask/SQLAlchemy social music app with 5 known bugs in its service layer. Traced each from its route through to the failing service.
 
 | | |
 |---|---|
-| **Stack** | Flask, SQLAlchemy, Python |
-| **Scale** | 5 known service-layer bugs across streaks, search, playlists, feed, and notifications |
-| **Impact** | Fixed and documented the listening-streak reset boundary, a duplicate-song search bug, and a missing last-song-in-playlist bug |
+| **Stack** | Flask, SQLAlchemy, pytest |
+| **Scale** | 3 of 5 bugs fixed and documented: listening-streak reset boundary, duplicate-song search, missing last-song-in-playlist |
+| **Impact** | Remaining 2 (stale "friends listening now" feed, missing rating notifications) honestly tracked as open issues rather than glossed over |
 
 🔗 [github.com/rohitpeets/MixTape](https://github.com/rohitpeets/MixTape)
 
 </details>
 
 <details>
-<summary><b>CineLog — Feature Contribution + Code Review Cycle</b></summary>
+<summary><b>Flappy Bird 2D — Multiplayer Game</b></summary>
 <br/>
 
-Implemented a watchlist feature end-to-end (deduplication logic + tests) on an existing Flask/SQLAlchemy film-tracking API, then worked through a full code review cycle.
+Flappy Bird rebuilt from scratch in Java Swing/AWT — no game engine, just JFrame, JPanel, and a manual game loop.
 
 | | |
 |---|---|
-| **Stack** | Flask, SQLAlchemy, Python |
-| **Scale** | End-to-end feature + 6 maintainer review comments addressed |
-| **Impact** | Recovered from a silent rebase that had dropped commits by managing an interactive rebase back to a clean, conventional-commit linear history |
-
-🔗 [github.com/rohitpeets/CineLogApi](https://github.com/rohitpeets/CineLogApi)
-
-</details>
-
-<details>
-<summary><b>FitFindr — Agentic Thrift-Shopping Assistant</b></summary>
-<br/>
-
-A three-tool agentic pipeline that searches thrift listings, suggests outfits from a user's wardrobe, and generates social-media-style captions — with defensive fallbacks instead of hard failures on edge cases like an empty wardrobe.
-
-| | |
-|---|---|
-| **Stack** | Python, Groq, Gradio |
-| **Scale** | 3 chained tools (search, outfit suggestion, caption generation) |
-| **Impact** | Explicit failure handling on every tool rather than unhandled exceptions |
-
-🔗 [github.com/rohitpeets/myFitBuddy](https://github.com/rohitpeets/myFitBuddy)
-
-</details>
-
-<details>
-<summary><b>Flappy Bird — Multiplayer 2D Game</b></summary>
-<br/>
-
-Rebuilt Flappy Bird in Java Swing with 60 FPS physics, pixel-accurate collision, and local multiplayer — solo, 2 weeks.
-
-| | |
-|---|---|
-| **Stack** | Java Swing GUI, OOP, file I/O persistence |
-| **Scale** | 4 game states, in-game shop + persistent balance system |
-| **Impact** | Shipped every feature requested by a 10-person classmate survey |
+| **Stack** | Java Swing GUI, OOP, flat-file persistence |
+| **Scale** | Local split-screen multiplayer, a 3-skin shop (500/2,000/10,000 coin tiers), persistent coin balance and save state |
+| **Impact** | Score-to-currency economy funds the shop directly from gameplay skill — no separate grind loop |
 
 🔗 [github.com/rohitpeets/flappy-bird-2d](https://github.com/rohitpeets/flappy-bird-2d)
 
@@ -165,16 +156,15 @@ A schedule planner that helps students plan effective class schedules without th
 
 ![Python](https://img.shields.io/badge/-Python-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![OCR](https://img.shields.io/badge/-OCR-00BFFF?style=flat-square&labelColor=0D1117)
 
-**CodePath — Applied AI Engineering Pathway (AI201)** — Student · *May 2026 – August 2026 (in progress)*
-- Accepted into CodePath's Applied AI Engineering program; shipped a new applied AI/software project roughly every week
-- Built a hybrid RAG system (Legal Research Assistant) combining dense retrieval, BM25, Reciprocal Rank Fusion, and cross-encoder reranking, benchmarked on the CUAD legal contract dataset
+**CodePath — Applied AI Engineering Pathway (AI201)** — Student · *May 2026 – August 2026*
+- Accepted into CodePath's Applied AI Engineering program; shipped a new applied AI/RAG project roughly every week
 - Built StudentBuddy, a RAG chatbot over 141 chunked professor reviews (ChromaDB, sentence-transformers, Groq) — evaluation write-up documents both what worked and a real retrieval failure
-- Built Provenance Guard, a dual-signal AI-text-detection backend (LLM classification + stylometric heuristics) with confidence scoring, an appeals workflow, and full audit logging
+- Built Provenance Guard, a dual-signal AI-text-detection backend with confidence scoring, an appeals workflow, and full audit logging, backed by 9 boundary-case tests
 - Fine-tuned a DistilBERT classifier (TakeMeter) on real scraped Reddit data to score discourse quality in r/soccer
-- Debugged an existing Flask/SQLAlchemy codebase (MixTape) as a structured bug-hunt exercise — found, fixed, and documented 3 of 5 known service-layer bugs
-- Contributed a feature to an existing codebase (CineLog) through a full code review cycle, including recovering a silent rebase via interactive rebase
+- Debugged an existing Flask/SQLAlchemy codebase (Mixtape), fixing and documenting 3 of 5 known bugs by tracing failures from routes into the service layer
+- Completed a full open-source-style contribution cycle on CineLog: implemented the watchlist feature end-to-end, addressed 6 maintainer review comments, and recovered from a dropped-commit rebase via interactive rebase to a clean history
 
-![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![ChromaDB](https://img.shields.io/badge/-ChromaDB-00BFFF?style=flat-square&labelColor=0D1117) ![Groq](https://img.shields.io/badge/-Groq-00BFFF?style=flat-square&labelColor=0D1117) ![Debugging](https://img.shields.io/badge/-Debugging-00BFFF?style=flat-square&labelColor=0D1117) ![Git](https://img.shields.io/badge/-Git-00BFFF?style=flat-square&labelColor=0D1117)
+![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![ChromaDB](https://img.shields.io/badge/-ChromaDB-00BFFF?style=flat-square&labelColor=0D1117) ![Groq](https://img.shields.io/badge/-Groq-00BFFF?style=flat-square&labelColor=0D1117) ![Debugging](https://img.shields.io/badge/-Debugging-00BFFF?style=flat-square&labelColor=0D1117) ![Code-Review](https://img.shields.io/badge/-Code%20Review-00BFFF?style=flat-square&labelColor=0D1117)
 
 **Operations Committee Member** — The Big Event @ McNeese State University · *Aug 2025 – May 2026*
 - Coordinated venue setup and tool distribution/return across 20 job sites for a 176-volunteer community event
@@ -277,15 +267,14 @@ A schedule planner that helps students plan effective class schedules without th
 ```yaml
 current_focus:
   learning:
-    - Applied AI Engineering (CodePath AI201) - wrapping up in August 2026
-    - Query routing and self-verification for RAG systems
+    - Data Structures & Algorithms interview prep (NeetCode)
+    - Query routing integration, self-verification, and ablation evaluation for RAG systems
   building:
-    - A-Self-Correcting-Legal-Research-System (hybrid retrieval + reranking done; query routing, self-verification, guardrails, and an ablation harness next)
+    - A-Self-Correcting-Legal-Research-System — hybrid retrieval + reranking done, wiring in query routing and self-verification next
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
-    - RAG evaluation and ablation methodology
-    - OCR and document intelligence pipelines
-    - Data structures & algorithms practice (NeetCode)
+    - PathReview (forked) — an AI portfolio-review tool, studying its FastAPI + multi-agent architecture
+    - RAG evaluation methods
   open_to:
     - Software Engineering Internships (Summer/Fall 2026, 2027)
     - AI/ML Engineering Internships
