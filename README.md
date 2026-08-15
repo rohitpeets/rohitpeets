@@ -67,6 +67,22 @@ RAG pipeline enabling McNeese students to query professor reviews in natural lan
 </details>
 
 <details>
+<summary><b>FitFindr — AI Thrift-Shopping Agent</b></summary>
+<br/>
+
+Agentic assistant that helps users discover secondhand clothing, generate outfit recommendations from their own wardrobe, and produce a social-media-style caption for the fit.
+
+| | |
+|---|---|
+| **Stack** | Python, Groq (agent reasoning), Gradio |
+| **Scale** | 3-tool sequential planning loop (search listings, suggest outfit, create fit card) with shared session-state passed between tools |
+| **Impact** | Every tool has explicit failure handling — empty-wardrobe and no-results cases return graceful fallbacks instead of raising exceptions; size matching was expanded mid-build from exact match to partial match (e.g. "M" matching "S/M") after testing showed it produced better results |
+
+🔗 [github.com/rohitpeets/myFitBuddy](https://github.com/rohitpeets/myFitBuddy)
+
+</details>
+
+<details>
 <summary><b>Provenance Guard — AI Text Provenance Detection</b></summary>
 <br/>
 
@@ -159,8 +175,9 @@ A schedule planner that helps students plan effective class schedules without th
 **CodePath — Applied AI Engineering Pathway (AI201)** — Student · *May 2026 – August 2026*
 - Accepted into CodePath's Applied AI Engineering program; shipped a new applied AI/RAG project roughly every week
 - Built StudentBuddy, a RAG chatbot over 141 chunked professor reviews (ChromaDB, sentence-transformers, Groq) — evaluation write-up documents both what worked and a real retrieval failure
-- Built Provenance Guard, a dual-signal AI-text-detection backend with confidence scoring, an appeals workflow, and full audit logging, backed by 9 boundary-case tests
+- Built FitFindr, a 3-tool agentic thrift-shopping assistant (Groq, Gradio) with a sequential planning loop and explicit graceful-failure handling for empty search results and empty wardrobes
 - Fine-tuned a DistilBERT classifier (TakeMeter) on real scraped Reddit data to score discourse quality in r/soccer
+- Built Provenance Guard, a dual-signal AI-text-detection backend with confidence scoring, an appeals workflow, and full audit logging, backed by 9 boundary-case tests
 - Debugged an existing Flask/SQLAlchemy codebase (Mixtape), fixing and documenting 3 of 5 known bugs by tracing failures from routes into the service layer
 - Completed a full open-source-style contribution cycle on CineLog: implemented the watchlist feature end-to-end, addressed 6 maintainer review comments, and recovered from a dropped-commit rebase via interactive rebase to a clean history
 
