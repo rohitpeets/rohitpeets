@@ -2,7 +2,7 @@
 
 | Domain | Proficiency | Details |
 |---|---|---|
-| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and cross-encoder reranking from scratch across two separate systems; query routing and self-verification still in progress |
+| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and working query routing from scratch across two separate systems; cross-encoder integration and self-verification still in progress |
 | Backend & API Development | Intermediate-Advanced | Flask REST APIs (Provenance Guard, CineLog, Mixtape) — SQLAlchemy-backed data models on CineLog and Mixtape specifically, plus service-layer debugging, code review cycles, and Git history recovery |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
@@ -16,7 +16,7 @@
 <summary><b>Self-Correcting Legal Research System — Advanced RAG</b></summary>
 <br/>
 
-Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion, reranks the fused shortlist with a cross-encoder, and (planned) adds a self-verification pass so the system can catch its own bad answers.
+Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion and routes queries by type, with cross-encoder integration and a self-verification pass in progress so the system can eventually catch its own bad answers.
 
 | Stage | Status |
 |---|---|
@@ -24,8 +24,8 @@ Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes pa
 | Dense retrieval (sentence-transformers + ChromaDB) | ✅ Done |
 | BM25 keyword retrieval | ✅ Done |
 | Hybrid retrieval (RRF fusion) | ✅ Done |
-| Cross-encoder reranking | ✅ Done |
-| Query routing | Code written, not yet wired into the main pipeline |
+| Query routing | ✅ Done |
+| Cross-encoder reranking | Partial — scores are computed via cross-encoder, but the reranked results are never sorted or returned yet |
 | Self-verification / guardrails / CUAD ablation harness | Planned |
 
 **Impact:** Fixed a real RRF scoring bug where a missing rank was incorrectly treated as rank 0 (a high score) instead of a non-contribution — caught via boundary testing, not by accident. Also fixed a BM25 tokenization bug (unstripped punctuation silently breaking keyword matches) that changed the top-5 results.
@@ -146,22 +146,6 @@ Flappy Bird rebuilt from scratch in Java Swing/AWT — no game engine, just JFra
 
 </details>
 
-<details>
-<summary><b>Schedule Buddy</b></summary>
-<br/>
-
-A schedule planner that helps students plan effective class schedules without the headache.
-
-| | |
-|---|---|
-| **Stack** | JavaScript |
-| **Scale** | Personal student scheduling tool |
-| **Impact** | Simplifies conflict-free schedule planning for students |
-
-🔗 [github.com/rohitpeets/schedule-buddy](https://github.com/rohitpeets/schedule-buddy)
-
-</details>
-
 ## `> git log --experience`
 
 **Extern Externship — Pfizer Partner Project** — Extern (Software Engineering Extern) · *May 2026 – Present*
@@ -232,7 +216,7 @@ A schedule planner that helps students plan effective class schedules without th
 | Achievement | Detail |
 |---|---|
 | CodePath Applied AI Engineering Pathway | Accepted into a competitive AI/ML engineering program |
-| $4,700+ Raised in Sponsorships | Secured funding from Lowe's, Stine, and Tractor Supply for a 176-volunteer event |
+| $4,700+ Raised in Sponsorships | Contributed to securing funding from Lowe's, Stine, and Tractor Supply for a 176-volunteer event |
 | 1,000+ People Fed | Self-funded community meal initiative across 7 stages over 4+ years |
 | $900K+ Managed | Farmer payment oversight across 300+ accounts with zero disbursement errors |
 | 120,000+ Organic Views | Video marketing campaign — zero paid promotion |
@@ -244,7 +228,7 @@ A schedule planner that helps students plan effective class schedules without th
 
 <div align="center">
 
-![Education](https://img.shields.io/badge/McNeese%20State%20University-B.S.%20Computer%20Science%20%2727-00BFFF?style=for-the-badge&labelColor=0D1117)
+![Education](https://img.shields.io/badge/McNeese%20State%20University-B.S.%20Computer%20Science%20Dec%20%2727-00BFFF?style=for-the-badge&labelColor=0D1117)
 
 </div>
 
@@ -254,9 +238,9 @@ A schedule planner that helps students plan effective class schedules without th
 current_focus:
   learning:
     - Data Structures & Algorithms interview prep (NeetCode)
-    - Query routing integration, self-verification, and ablation evaluation for RAG systems
+    - Cross-encoder integration, self-verification, and ablation evaluation for RAG systems
   building:
-    - A-Self-Correcting-Legal-Research-System — hybrid retrieval + reranking done, wiring in query routing and self-verification next
+    - A-Self-Correcting-Legal-Research-System — hybrid retrieval + query routing done, wiring in cross-encoder integration and self-verification next
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
     - PathReview (forked) — an AI portfolio-review tool, studying its FastAPI + multi-agent architecture
