@@ -8,7 +8,7 @@
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
 | Systems Programming (Java) | Intermediate | OOP coursework and game architecture — file I/O persistence, access-control systems, real-time game loops |
 | Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
-| Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, ran a community meal initiative from age 11 |
+| Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, grew a self-funded community meal initiative from volunteer to lead organizer |
 
 ## `> ls featured-projects/ --detailed`
 
