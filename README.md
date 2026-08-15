@@ -3,7 +3,7 @@
 | Domain | Proficiency | Details |
 |---|---|---|
 | RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and cross-encoder reranking from scratch across two separate systems; query routing and self-verification still in progress |
-| Backend & API Development | Intermediate-Advanced | Multiple Flask/SQLAlchemy REST APIs (Provenance Guard, CineLog, Mixtape) — service-layer debugging, code review cycles, and Git history recovery |
+| Backend & API Development | Intermediate-Advanced | Flask REST APIs (Provenance Guard, CineLog, Mixtape) — SQLAlchemy-backed data models on CineLog and Mixtape specifically, plus service-layer debugging, code review cycles, and Git history recovery |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
 | Systems Programming (Java) | Intermediate | OOP coursework and game architecture — file I/O persistence, access-control systems, real-time game loops |
