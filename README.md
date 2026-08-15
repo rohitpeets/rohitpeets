@@ -223,45 +223,6 @@ A schedule planner that helps students plan effective class schedules without th
 
 </div>
 
-## `> ./analytics --github`
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/stats.svg" width="49%"/>
-<img src="https://streak-stats.demolab.com/?user=rohitpeets&hide_border=true&background=0D1117&stroke=00BFFF&ring=00BFFF&fire=00BFFF&currStreakLabel=00BFFF&sideNums=00BFFF&sideLabels=E6EDF3&dates=E6EDF3&currStreakNum=E6EDF3" width="49%"/>
-
-<img src="https://raw.githubusercontent.com/rohitpeets/rohitpeets/main/profile-assets/top-langs.svg" width="49%"/>
-
-</div>
-
-## `> activity-graph --timeline`
-
-<div align="center">
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=rohitpeets&bg_color=0D1117&color=00BFFF&line=00BFFF&point=00BFFF&hide_border=true&area=true&area_color=00BFFF)
-
-</div>
-
-## `> contribution-report --detailed`
-
-<div align="center">
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rohitpeets&theme=github_dark" width="100%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=rohitpeets&theme=github_dark" width="49%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=rohitpeets&theme=github_dark&utcOffset=-6" width="49%"/>
-
-</div>
-
-## `> ./snake-animation.sh`
-
-<div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/rohitpeets/rohitpeets/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
 ## `> cat current-focus.yaml`
 
 ```yaml
@@ -278,6 +239,7 @@ current_focus:
   open_to:
     - Software Engineering Internships (Summer/Fall 2026, 2027)
     - AI/ML Engineering Internships
+    - Full-Time Software Engineering (2027)
     - Full-Stack Engineering roles
 ```
 
