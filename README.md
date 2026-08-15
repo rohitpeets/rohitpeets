@@ -5,7 +5,7 @@
 | RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and cross-encoder reranking from scratch across two separate systems; query routing and self-verification still in progress |
 | Backend & API Development | Intermediate-Advanced | Multiple Flask/SQLAlchemy REST APIs (Provenance Guard, CineLog, Mixtape) — service-layer debugging, code review cycles, and Git history recovery |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
-| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio — built a handful of role-based, real-time systems |
+| Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
 | Systems Programming (Java) | Intermediate | OOP coursework and game architecture — file I/O persistence, access-control systems, real-time game loops |
 | Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
 | Operations & Program Management | Advanced | 4+ years leading teams and programs — managed $900K+ in transactions, ran a community meal initiative from age 11 |
@@ -165,6 +165,14 @@ A schedule planner that helps students plan effective class schedules without th
 - Completed a full open-source-style contribution cycle on CineLog: implemented the watchlist feature end-to-end, addressed 6 maintainer review comments, and recovered from a dropped-commit rebase via interactive rebase to a clean history
 
 ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![ChromaDB](https://img.shields.io/badge/-ChromaDB-00BFFF?style=flat-square&labelColor=0D1117) ![Groq](https://img.shields.io/badge/-Groq-00BFFF?style=flat-square&labelColor=0D1117) ![Debugging](https://img.shields.io/badge/-Debugging-00BFFF?style=flat-square&labelColor=0D1117) ![Code-Review](https://img.shields.io/badge/-Code%20Review-00BFFF?style=flat-square&labelColor=0D1117)
+
+**CodePath — Intro to Web Development (Web101)** — Student · *Completed August 2026 (10-week program)*
+- Built The Hunger Project, a website supporting community volunteerism, food service, and fundraising, from scratch
+- Wrote semantic HTML page structure and a full CSS design system — custom properties, flexbox layout, a typography scale, and pseudo-classes/pseudo-elements
+- Implemented JavaScript features including DOM manipulation, event listeners, a dark mode toggle, and a fully validated RSVP form, debugging real issues along the way (variable scope, event handling, CSS selector specificity)
+- Collaborated with classmates across weekly breakout rooms and presented the finished project in a final showcase
+
+![HTML](https://img.shields.io/badge/-HTML-00BFFF?style=flat-square&labelColor=0D1117) ![CSS](https://img.shields.io/badge/-CSS-00BFFF?style=flat-square&labelColor=0D1117) ![JavaScript](https://img.shields.io/badge/-JavaScript-00BFFF?style=flat-square&labelColor=0D1117)
 
 **Operations Committee Member** — The Big Event @ McNeese State University · *Aug 2025 – May 2026*
 - Coordinated venue setup and tool distribution/return across 20 job sites for a 176-volunteer community event
