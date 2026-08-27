@@ -2,7 +2,7 @@
 
 | Domain | Proficiency | Details |
 |---|---|---|
-| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion and working query routing from scratch across two separate systems; cross-encoder integration and self-verification still in progress |
+| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion, LLM-based query routing (Groq), and cross-encoder reranking from scratch across two separate systems; self-verification and guardrails still in progress |
 | Backend & API Development | Intermediate-Advanced | Flask REST APIs (Provenance Guard, CineLog, Mixtape) — SQLAlchemy-backed data models on CineLog and Mixtape specifically, plus service-layer debugging, code review cycles, and Git history recovery |
 | Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
@@ -16,7 +16,7 @@
 <summary><b>Self-Correcting Legal Research System — Advanced RAG</b></summary>
 <br/>
 
-Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion and routes queries by type, with cross-encoder integration and a self-verification pass in progress so the system can eventually catch its own bad answers.
+Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion, routes queries by type via a Groq-hosted LLM classifier, and reranks with a cross-encoder, with a self-verification pass in progress so the system can eventually catch its own bad answers.
 
 | Stage | Status |
 |---|---|
@@ -25,7 +25,7 @@ Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes pa
 | BM25 keyword retrieval | ✅ Done |
 | Hybrid retrieval (RRF fusion) | ✅ Done |
 | Query routing | ✅ Done |
-| Cross-encoder reranking | Partial — scores are computed via cross-encoder, but the reranked results are never sorted or returned yet |
+| Cross-encoder reranking | ✅ Done |
 | Self-verification / guardrails / CUAD ablation harness | Planned |
 
 **Impact:** Fixed a real RRF scoring bug where a missing rank was incorrectly treated as rank 0 (a high score) instead of a non-contribution — caught via boundary testing, not by accident. Also fixed a BM25 tokenization bug (unstripped punctuation silently breaking keyword matches) that changed the top-5 results.
@@ -238,9 +238,9 @@ Flappy Bird rebuilt from scratch in Java Swing/AWT — no game engine, just JFra
 current_focus:
   learning:
     - Data Structures & Algorithms interview prep (NeetCode)
-    - Cross-encoder integration, self-verification, and ablation evaluation for RAG systems
+    - Self-verification, guardrails, and ablation evaluation for RAG systems
   building:
-    - A-Self-Correcting-Legal-Research-System — hybrid retrieval + query routing done, wiring in cross-encoder integration and self-verification next
+    - A-Self-Correcting-Legal-Research-System — hybrid retrieval, query routing, and cross-encoder reranking done, wiring in self-verification and CUAD ablation eval next
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
     - PathReview (forked) — an AI portfolio-review tool, studying its FastAPI + multi-agent architecture
