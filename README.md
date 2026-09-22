@@ -2,9 +2,9 @@
 
 | Domain | Proficiency | Details |
 |---|---|---|
-| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion, LLM-based query routing (Groq), and cross-encoder reranking from scratch across two separate systems; self-verification and guardrails still in progress |
+| RAG & LLM Systems | Intermediate-Advanced | Built hybrid (dense+BM25) retrieval with Reciprocal Rank Fusion, LLM-based query routing (Groq), and cross-encoder reranking from scratch across two separate systems; added LLM-as-judge self-verification, Prompt Guard input guardrails, and a CUAD ablation eval harness to the legal research system |
 | Backend & API Development | Intermediate-Advanced | Flask REST APIs (Provenance Guard, CineLog, Mixtape) — SQLAlchemy-backed data models on CineLog and Mixtape specifically, plus service-layer debugging, code review cycles, and Git history recovery |
-| Document Intelligence / OCR | Intermediate | 3 months applying OCR pipelines (Tesseract, PaddleOCR) + semantic search on a Pfizer-partnered project via Extern |
+| Document Intelligence / OCR | Intermediate | Since May 2026 on a Pfizer-partnered project via Extern — PyMuPDF/OpenCV extraction pipelines, a Tesseract vs. PaddleOCR vs. EasyOCR benchmark, and LlamaIndex + Chroma retrieval |
 | Full-Stack Web Development | Beginner-Intermediate | React, Node.js, Firebase, Twilio for role-based, real-time systems; HTML/CSS/JS fundamentals from CodePath's Web101 |
 | Systems Programming (Java) | Intermediate | OOP coursework and game architecture — file I/O persistence, access-control systems, real-time game loops |
 | Fine-Tuning & NLP Classification | Beginner | One project fine-tuning a DistilBERT classifier on scraped Reddit data |
@@ -16,7 +16,7 @@
 <summary><b>Self-Correcting Legal Research System — Advanced RAG</b></summary>
 <br/>
 
-Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion, routes queries by type via a Groq-hosted LLM classifier, and reranks with a cross-encoder, with a self-verification pass in progress so the system can eventually catch its own bad answers.
+Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes past "embed, search, generate" — combines dense + BM25 retrieval via Reciprocal Rank Fusion, routes queries by type via a Groq-hosted LLM classifier, reranks with a cross-encoder, generates cited answers, and runs an independent LLM-as-judge self-verification pass so the system catches its own bad answers instead of confidently hallucinating.
 
 | Stage | Status |
 |---|---|
@@ -26,11 +26,30 @@ Self-correcting RAG system for legal contract Q&A over the CUAD dataset. Goes pa
 | Hybrid retrieval (RRF fusion) | ✅ Done |
 | Query routing | ✅ Done |
 | Cross-encoder reranking | ✅ Done |
-| Self-verification / guardrails / CUAD ablation harness | Planned |
+| Cited answer generation (abstains when unsupported) | ✅ Done |
+| Self-verification (LLM-as-judge grounding check) | ✅ Done |
+| Input guardrails (Prompt Guard injection screening) | ✅ Done |
+| CUAD ablation eval harness (recall, abstain & citation accuracy per strategy) | ✅ Done |
 
 **Impact:** Fixed a real RRF scoring bug where a missing rank was incorrectly treated as rank 0 (a high score) instead of a non-contribution — caught via boundary testing, not by accident. Also fixed a BM25 tokenization bug (unstripped punctuation silently breaking keyword matches) that changed the top-5 results.
 
 🔗 [github.com/rohitpeets/A-Self-Correcting-Legal-Research-System](https://github.com/rohitpeets/A-Self-Correcting-Legal-Research-System)
+
+</details>
+
+<details>
+<summary><b>Pharma Document Extraction & RAG — Pfizer Externship</b></summary>
+<br/>
+
+Notebooks from a Pfizer-partnered externship (via Extern) on getting text out of pharmaceutical PDFs — from clean digital files to scanned pages — and making it searchable with retrieval-augmented generation.
+
+| | |
+|---|---|
+| **Stack** | PyMuPDF, OpenCV, pytesseract, PaddleOCR, EasyOCR, LlamaIndex, Chroma, Gemini |
+| **Scale** | 6 notebooks across extraction, OCR benchmarking, and retrieval |
+| **Impact** | Ran three OCR engines head-to-head on the same documents and compared chunking strategies before picking a retrieval setup, instead of defaulting to one tool |
+
+🔗 [github.com/rohitpeets/pharma-document-extraction-rag](https://github.com/rohitpeets/pharma-document-extraction-rag)
 
 </details>
 
@@ -150,9 +169,10 @@ Flappy Bird rebuilt from scratch in Java Swing/AWT — no game engine, just JFra
 
 **Extern Externship — Pfizer Partner Project** — Extern (Software Engineering Extern) · *May 2026 – Present*
 - Placed via Extern's externship program on a project team partnered with Pfizer
-- Building Python pipelines to process pharmaceutical vendor files using Tesseract and PaddleOCR for automated document classification
-- Developing a RAG retrieval system with LlamaIndex, deploying open-source LLMs (Mistral, Phi-2) for semantic document search
-- Delivering end-to-end system evaluation benchmarking OCR accuracy and retrieval quality, including deployment recommendations and a demo UI
+- Built PDF extraction pipelines for pharmaceutical documents (clean digital files through scanned pages) using PyMuPDF, OpenCV, and pytesseract, including position-aware regex field extraction
+- Benchmarked Tesseract, PaddleOCR, and EasyOCR side by side on the same documents
+- Built and compared chunking and retrieval strategies with LlamaIndex, Chroma, and Gemini to make extracted text searchable via RAG
+- 🔗 [pharma-document-extraction-rag](https://github.com/rohitpeets/pharma-document-extraction-rag) · [Data-Extraction-Pipeines-Document-RAG-Agent](https://github.com/rohitpeets/Data-Extraction-Pipeines-Document-RAG-Agent)
 
 ![Python](https://img.shields.io/badge/-Python-00BFFF?style=flat-square&labelColor=0D1117) ![RAG](https://img.shields.io/badge/-RAG-00BFFF?style=flat-square&labelColor=0D1117) ![OCR](https://img.shields.io/badge/-OCR-00BFFF?style=flat-square&labelColor=0D1117)
 
@@ -240,13 +260,13 @@ current_focus:
     - Data Structures & Algorithms interview prep (NeetCode)
     - Self-verification, guardrails, and ablation evaluation for RAG systems
   building:
-    - A-Self-Correcting-Legal-Research-System — hybrid retrieval, query routing, and cross-encoder reranking done, wiring in self-verification and CUAD ablation eval next
+    - A-Self-Correcting-Legal-Research-System — full pipeline shipped (hybrid retrieval, routing, reranking, self-verification, guardrails, CUAD ablation eval)
     - Full-stack Volunteer Management System (React/Node/Firebase/Twilio)
   exploring:
     - PathReview (forked) — an AI portfolio-review tool, studying its FastAPI + multi-agent architecture
     - RAG evaluation methods
   open_to:
-    - Software Engineering Internships (Summer/Fall 2026, 2027)
+    - Software Engineering Internships (Summer 2027)
     - AI/ML Engineering Internships
     - Full-Time Software Engineering (2027)
     - Full-Stack Engineering roles
